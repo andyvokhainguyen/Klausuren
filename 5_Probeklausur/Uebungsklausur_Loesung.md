@@ -1,6 +1,6 @@
 # Lösungsschlüssel – Übungsklausur Programmierung (SS26)
 
-Gesamt: **90 Punkte**. Lösungen zu [Uebungsklausur_Prog_SS26.md](Uebungsklausur_Prog_SS26.md).
+Gesamt: **90 Punkte**. Lösungen zu [Uebungsklausur.md](Uebungsklausur.md).
 
 ---
 
