@@ -8,7 +8,7 @@ Matrikelnummer:
 999.999
 """
 
-from prog_ss24.src import aufgabe02
+from src import aufgabe02
 import pytest
 
 

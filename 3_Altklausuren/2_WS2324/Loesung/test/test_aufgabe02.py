@@ -10,7 +10,7 @@ Matrikelnummer:
 
 import pytest
 
-from prog_ws2324.src import aufgabe02
+from src import aufgabe02
 
 
 # =========================================================================

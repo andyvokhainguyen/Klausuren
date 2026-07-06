@@ -13,7 +13,7 @@ Matrikelnummer:
 
 import pytest
 
-from prog_ss23.src import aufgabe04
+from src import aufgabe04
 
 
 # =========================================================================
