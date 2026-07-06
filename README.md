@@ -1,12 +1,12 @@
 # Programmierung 2 – Klausurvorbereitung
 
-Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der Klausur ist nur ein Syntax-Blatt erlaubt (`Hilfsmittel_erlaubt.pdf`) – die kompletten Code-Strukturen musst du **auswendig** können.
+Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der Klausur ist nur ein Syntax-Blatt erlaubt (`Hilfsmittel_Klausur_Prog_25.pdf`) – die kompletten Code-Strukturen musst du **auswendig** können.
 
 ## 📂 Ordnerstruktur
 
 | Ordner / Datei | Inhalt |
 |---|---|
-| **`Hilfsmittel_erlaubt.pdf`** | Das in der Klausur **erlaubte** Syntax-Blatt (nur Syntax, keine fertigen Lösungen). |
+| **`Hilfsmittel_Klausur_Prog_25.pdf`** | Das in der Klausur **erlaubte** Syntax-Blatt (nur Syntax, keine fertigen Lösungen). |
 | **`1_Skripte/`** | Die 6 Vorlesungsskripte (PDF) als Wissensgrundlage. |
 | **`2_Zusammenfassungen/`** | Meine Lern-Zusammenfassungen – das **Kernmaterial** zum Auswendiglernen. |
 | **`3_Altklausuren/`** | Die 6 Original-Altklausuren (SS23–WS2526). Pro Klausur: `Aufgabenstellung.pdf` (die Aufgaben), `Vorlage/` (leere Dateien zum Selberlösen) und `Loesung/` (vollständige Musterlösung). *(WS2526-Vorlage wurde aus der Lösung rekonstruiert, da kein Original-Zip vorlag.)* |

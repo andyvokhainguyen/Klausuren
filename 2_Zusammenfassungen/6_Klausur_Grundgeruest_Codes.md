@@ -3,6 +3,9 @@
 Vergleich aller 6 Altklausuren. Ergebnis: **jede Klausur hat dieselben 4 Code-Blöcke.**
 **SS25 und WS2526 sind fast identisch** → das ist die wahrscheinlichste Vorlage für deine Klausur.
 
+> ⚠️ **Nicht auf dem Hilfsmittel** (`Hilfsmittel_Klausur_Prog_25.pdf`, nur 1 Seite) – **das musst du auswendig können:** `argparse`, `max(dict, key=dict.get)` (häufigstes Element), `sorted(..., key=len)`, `if __name__ == "__main__":`, `with pytest.raises(...)`.
+> **Aufgelistet/erlaubt** sind dagegen u.a.: `getopt.getopt`, `python file.py -a -b`, `open/read/readline(s)/write/writelines/close`, `pytest` + `assert`, `split`/`strip`/`replace`, `dict.get`, list/set/dict-Methoden, der Swap `a[j], a[j+1] = a[j+1], a[j]`.
+
 ## Übersicht: Welcher Code-Block in welcher Klausur
 
 | Klausur | Block A: Testen | Block B: CLI + Datei | Block C: Datenstruktur | Block D: Sortieren |
