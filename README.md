@@ -9,7 +9,7 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 | **`Hilfsmittel_erlaubt.pdf`** | Das in der Klausur **erlaubte** Syntax-Blatt (nur Syntax, keine fertigen Lösungen). |
 | **`1_Skripte/`** | Die 6 Vorlesungsskripte (PDF) als Wissensgrundlage. |
 | **`2_Zusammenfassungen/`** | Meine Lern-Zusammenfassungen – das **Kernmaterial** zum Auswendiglernen. |
-| **`3_Altklausuren/`** | Die 6 Original-Altklausuren (SS23–WS2526). Pro Klausur: `Aufgabenstellung.pdf` (die Aufgaben) + `Loesung/` (vollständige Musterlösung: `src/` + `test/`). |
+| **`3_Altklausuren/`** | Die 6 Original-Altklausuren (SS23–WS2526). Pro Klausur: `Aufgabenstellung.pdf` (die Aufgaben), `Vorlage/` (leere Original-Dateien zum Selberlösen – **außer WS2526**) und `Loesung/` (vollständige Musterlösung). |
 | **`4_Uebungsblaetter_Loesungen/`** | Meine Lösungen zu den Übungsblättern 1–7 + der Wiederholungsaufgaben. |
 | **`5_Probeklausur/`** | Selbst erstellte Übungsklausuren, je Klausur ein Unterordner (`1_Probeklausur/`, `2_Probeklausur/`) mit `Aufgaben.md` + `Loesung.md`. |
 
