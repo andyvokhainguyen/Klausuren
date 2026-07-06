@@ -1,31 +1,31 @@
-# 🎯 3-Tage-Lernplan: Diese Codes MUSST du können
+# 🎯 2-Tage-Lernplan: Diese Codes MUSST du können
 
-**Für Anfänger gemacht:** Jeder Code hat eine **Eselsbrücke** (die Idee in einem Satz), **Zeilen-Erklärungen** und **typische Fehler**. Lerne nicht die Zeichen auswendig, sondern die **Idee** – dann kannst du den Code jederzeit neu herleiten.
+Jeder Code hat eine **Eselsbrücke** (die Idee in einem Satz), **Zeilen-Erklärungen** und **typische Fehler**. Lerne nicht die Zeichen auswendig, sondern die **Idee** – dann kannst du den Code jederzeit neu herleiten.
+**Tempo-Regel bei 2 Tagen:** Was du schon sicher kannst, hakst du per Schnelltest ab (einmal fehlerfrei aus dem Kopf schreiben = fertig, weiter) – die volle Lernschleife nur für Unsicheres.
 
-**So lernst du jeden Code (5-Schritte-Methode):**
+**So lernst du jeden unsicheren Code (4 Schritte):**
 1. Code **lesen** + Erklärung verstehen
 2. **Abtippen** in VSCode und **ausführen** (er muss laufen!)
 3. Datei zuklappen → **aus dem Kopf neu schreiben** (Blank-Page!)
-4. Vergleichen, Fehler markieren
-5. Am nächsten Tag nur Schritt 3 wiederholen
+4. Vergleichen, Fehler markieren → am nächsten Block nur Schritt 3 wiederholen
 
 > ⚠️ Aufs Hilfsmittelblatt (1 Seite) kannst du nur Syntax schreiben. **NICHT drauf** (auswendig!): `max(d, key=d.get)`, `sorted(key=len)`, `if __name__ == "__main__":`, argparse.
 
 ---
 
-# 📅 DER PLAN
+# 📅 DER PLAN (2 Tage)
 
-| Tag | Vormittag (~2h) | Nachmittag (~2h) | Abend (~1h) |
+| Tag | Vormittag (~2,5h) | Nachmittag (~2,5h) | Abend (~1,5h) |
 |---|---|---|---|
-| **Tag 1** | Code 1–3: Datei-IO, getopt, Logdatei-Tool | Code 4: pytest + Testregeln | Blank-Page: Code 1–4 |
-| **Tag 2** | Code 5–6: Stack/Queue, verkettete Liste | Code 7–8: BST, die 3 naiven Sorts | Blank-Page: Code 5–8 + Tag-1-Wdh. |
-| **Tag 3** | Code 9: Quick/Merge + „nach Länge" | **Probeklausur real schreiben** (90 min, nur Hilfsmittelblatt!) | Fehler nacharbeiten + Theorie |
+| **Tag 1** | Code 1–4: Datei-IO, getopt, Logdatei-Tool, pytest | Code 5–7: Stack/Queue, verkettete Liste, BST | Code 8: die 3 naiven Sorts + Blank-Page über ALLES von heute |
+| **Tag 2** | Code 9: Quick/Merge + „nach Länge" + Blank-Page-Wdh. Tag 1 | **Probeklausur real schreiben** (90 min, nur Hilfsmittelblatt!) | Fehler nacharbeiten + Theorie 1× lesen |
 
-Empfehlung Tag 3 nachmittags: `5_Probeklausur/2_Probeklausur` (getopt + Liste + Selection = wahrscheinlichste Mischung). Theorie abends: `1_Theorie_SoftwareEngineering.md`.
+Empfehlung Tag 2 nachmittags: `5_Probeklausur/2_Probeklausur` (getopt + Liste + Selection = wahrscheinlichste Mischung). Theorie abends: `1_Theorie_SoftwareEngineering.md`.
+**Priorität, falls die Zeit nicht reicht:** Code 2+3 (getopt+Logdatei) > Code 8 (Sorts nach Länge) > Code 7 (BST) > Code 4 (pytest) > Rest. Das ist das SS25/WS2526-Muster.
 
 ---
 
-# TAG 1 – Datei, Kommandozeile, Testen
+# TAG 1 (Vormittag) – Datei, Kommandozeile, Testen
 
 ## CODE 1: Datei lesen & schreiben
 **Eselsbrücke:** *„with open – r zum Lesen, w zum Schreiben, für jede Zeile strip."*
@@ -174,7 +174,7 @@ with pytest.raises(AssertionError):
 
 ---
 
-# TAG 2 – Datenstrukturen & naive Sortierverfahren
+# TAG 1 (Nachmittag + Abend) – Datenstrukturen & naive Sortierverfahren
 
 ## CODE 5: Stack & Queue (heißer Kandidat – kam noch NIE dran!)
 **Eselsbrücke:** *„Beide sind eine Liste. Stack nimmt hinten (Stapel Teller), Queue nimmt vorne (Warteschlange Kasse)."*
@@ -387,7 +387,7 @@ def insertion_sort(a):
 
 ---
 
-# TAG 3 – Divide & Conquer + Generalprobe
+# TAG 2 – Divide & Conquer + Generalprobe
 
 ## CODE 9: Quicksort & Mergesort
 **Eselsbrücken:**
@@ -433,7 +433,7 @@ def merge(l, r):
 
 ---
 
-## Tag 3 Nachmittag: GENERALPROBE
+## Tag 2 Nachmittag: GENERALPROBE
 1. `5_Probeklausur/2_Probeklausur/Aufgaben.md` öffnen
 2. **90 Minuten Timer**, nur `Hilfsmittel_Klausur_Prog_25.pdf` daneben
 3. Alles in VSCode schreiben und **ausführen**
@@ -448,14 +448,12 @@ def merge(l, r):
 - [ ] getopt-Gerüst komplett aus dem Kopf (parsen → zuordnen → prüfen)
 - [ ] Logdatei: `split(";")` → dict zählen → `max(d, key=d.get)`
 - [ ] pytest-Gerüst + Testregeln (Grenzwert! leer! 0/1/mehrfach!)
-
-**Tag 2:**
 - [ ] Stack (`pop()`) vs. Queue (`pop(0)`) — der EINE Unterschied
 - [ ] Liste: Durchlauf-Muster + insert + delete (Kopf-Sonderfall!)
 - [ ] BST: `_insert` + `_inorder` (links-ich-rechts) + `_search`
 - [ ] Bubble + Selection + Insertion + „nur Vergleichszeile ändern"
 
-**Tag 3:**
+**Tag 2:**
 - [ ] Quicksort (`<=`!) + Mergesort/merge
 - [ ] Sortieren nach `len()` und mit Tupel-Vergleich
 - [ ] Probeklausur unter Realbedingungen bestanden

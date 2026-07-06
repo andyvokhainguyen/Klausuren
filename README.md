@@ -20,7 +20,7 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 4. **`4_Fokusthemen_Bubble_Selection_Queue.md`** – die wahrscheinlichsten „neuen" Aufgaben (Lückenanalyse).
 5. **`5_Skripte_ausfuehrlich.md`** – die ausführliche Gesamt-Zusammenfassung der Skripte.
 6. **`6_Klausur_Grundgeruest_Codes.md`** – ⭐ Vergleich aller Klausuren: die 4 Code-Blöcke, die IMMER kommen, als Skelette + Übungen (nur Codes).
-7. **`7_Lernplan_3Tage_MUSS_ICH_KOENNEN.md`** – 🎯 **HIER STARTEN (Klausur in 3 Tagen):** Tagesplan + die 9 Pflicht-Codes mit Eselsbrücken, Zeilen-Erklärungen und Blank-Page-Checkliste.
+7. **`7_Lernplan_2Tage_MUSS_ICH_KOENNEN.md`** – 🎯 **HIER STARTEN (Klausur in 2 Tagen):** Tagesplan + die 9 Pflicht-Codes mit Eselsbrücken, Zeilen-Erklärungen und Blank-Page-Checkliste.
 
 ## 🎯 Empfohlener Lernpfad (Schritt für Schritt)
 
