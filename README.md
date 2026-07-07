@@ -17,6 +17,8 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 1. **`1_Theorie_SoftwareEngineering.md`** – alle Theoriethemen im Altklausur-Frage-Stil (+ noch nie gefragte Themen).
 2. **`2_Lernplan_2Tage_MUSS_ICH_KOENNEN.md`** – 🎯 **HIER STARTEN (Klausur in 2 Tagen):** Tagesplan + die 9 Pflicht-Codes mit Eselsbrücken, Zeilen-Erklärungen und Blank-Page-Checkliste.
 3. **`3_Alle_Codes_zum_Abtippen.md`** – 📋 alle relevanten Codes der 4 Themen **kompakt auf einen Blick** – zum Abtippen und Blank-Page-Üben.
+4. **`4_Sortierverfahren_Traces.md`** – alle 6 Sortierverfahren Schritt für Schritt durchgerechnet (`[55,7,78,12,42]`).
+5. **`5_Theoriefragen_Katalog.md`** – alle Theoriefragen aus den 6 Altklausuren + mögliche weitere (zum Selbsttesten; Antworten in Datei 1).
 
 ## 🎯 Empfohlener Lernpfad (Schritt für Schritt)
 
