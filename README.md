@@ -12,6 +12,7 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 | **`3_Altklausuren/`** | Die 6 Original-Altklausuren (SS23–WS2526). Pro Klausur: `Aufgabenstellung.pdf` (die Aufgaben), `Vorlage/` (leere Dateien zum Selberlösen) und `Loesung/` (vollständige Musterlösung). *(WS2526-Vorlage wurde aus der Lösung rekonstruiert, da kein Original-Zip vorlag.)* |
 | **`4_Uebungsblaetter_Loesungen/`** | Meine Lösungen zu den Übungsblättern 1–7 + der Wiederholungsaufgaben. |
 | **`5_Probeklausur/`** | Selbst erstellte Übungsklausuren, je Klausur ein Unterordner (`1_Probeklausur/`, `2_Probeklausur/`) mit `Aufgaben.md` + `Loesung.md`. |
+| **`6_Uebungsplatz/`** | 🛠️ Freier Bereich – hier eigene Dateien zum Üben anlegen (Blank-Page, eigene Lösungen, Notizen). |
 
 ### `2_Zusammenfassungen/` im Detail (schlank gehalten – 4 Kerndateien)
 1. **`1_Theorie_Fragen_und_Antworten.md`** – alle Theoriefragen aus den 6 Altklausuren + mögliche weitere, **mit kurzen vollständigen Antworten** (zum Selbsttesten).
