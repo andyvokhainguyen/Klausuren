@@ -21,6 +21,7 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 5. **`5_Skripte_ausfuehrlich.md`** – die ausführliche Gesamt-Zusammenfassung der Skripte.
 6. **`6_Klausur_Grundgeruest_Codes.md`** – ⭐ Vergleich aller Klausuren: die 4 Code-Blöcke, die IMMER kommen, als Skelette + Übungen (nur Codes).
 7. **`7_Lernplan_2Tage_MUSS_ICH_KOENNEN.md`** – 🎯 **HIER STARTEN (Klausur in 2 Tagen):** Tagesplan + die 9 Pflicht-Codes mit Eselsbrücken, Zeilen-Erklärungen und Blank-Page-Checkliste.
+8. **`8_Alle_Codes_zum_Abtippen.md`** – 📋 alle relevanten Codes der 4 Themen **kompakt auf einen Blick**, ohne Drumherum – zum Abtippen und Blank-Page-Üben.
 
 ## 🎯 Empfohlener Lernpfad (Schritt für Schritt)
 
