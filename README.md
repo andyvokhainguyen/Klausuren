@@ -13,27 +13,20 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 | **`4_Uebungsblaetter_Loesungen/`** | Meine Lösungen zu den Übungsblättern 1–7 + der Wiederholungsaufgaben. |
 | **`5_Probeklausur/`** | Selbst erstellte Übungsklausuren, je Klausur ein Unterordner (`1_Probeklausur/`, `2_Probeklausur/`) mit `Aufgaben.md` + `Loesung.md`. |
 
-### `2_Zusammenfassungen/` im Detail
+### `2_Zusammenfassungen/` im Detail (schlank gehalten – 3 Kerndateien)
 1. **`1_Theorie_SoftwareEngineering.md`** – alle Theoriethemen im Altklausur-Frage-Stil (+ noch nie gefragte Themen).
-2. **`2_Code_Uebersicht.md`** – alle prüfungsrelevanten Codes (Skript 02–06) mit Erklärungen.
-3. **`3_Sortierverfahren_Traces.md`** – alle 6 Sortierverfahren Schritt für Schritt durchgerechnet.
-4. **`4_Fokusthemen_Bubble_Selection_Queue.md`** – die wahrscheinlichsten „neuen" Aufgaben (Lückenanalyse).
-5. **`5_Skripte_ausfuehrlich.md`** – die ausführliche Gesamt-Zusammenfassung der Skripte.
-6. **`6_Klausur_Grundgeruest_Codes.md`** – ⭐ Vergleich aller Klausuren: die 4 Code-Blöcke, die IMMER kommen, als Skelette + Übungen (nur Codes).
-7. **`7_Lernplan_2Tage_MUSS_ICH_KOENNEN.md`** – 🎯 **HIER STARTEN (Klausur in 2 Tagen):** Tagesplan + die 9 Pflicht-Codes mit Eselsbrücken, Zeilen-Erklärungen und Blank-Page-Checkliste.
-8. **`8_Alle_Codes_zum_Abtippen.md`** – 📋 alle relevanten Codes der 4 Themen **kompakt auf einen Blick**, ohne Drumherum – zum Abtippen und Blank-Page-Üben.
+2. **`2_Lernplan_2Tage_MUSS_ICH_KOENNEN.md`** – 🎯 **HIER STARTEN (Klausur in 2 Tagen):** Tagesplan + die 9 Pflicht-Codes mit Eselsbrücken, Zeilen-Erklärungen und Blank-Page-Checkliste.
+3. **`3_Alle_Codes_zum_Abtippen.md`** – 📋 alle relevanten Codes der 4 Themen **kompakt auf einen Blick** – zum Abtippen und Blank-Page-Üben.
 
 ## 🎯 Empfohlener Lernpfad (Schritt für Schritt)
 
-**Grundprinzip:** Nicht 20 Programme auswendig lernen, sondern **~6 Grundmuster** verstehen und anpassen. Pro Struktur: verstehen → Skelett erkennen → abschreiben → **aus dem Kopf aufschreiben** → mit Abstand wiederholen.
+**Grundprinzip:** Nicht 20 Programme auswendig lernen, sondern die Grundmuster verstehen und anpassen. Pro Struktur: verstehen → abtippen & ausführen → **aus dem Kopf aufschreiben** (Blank-Page) → wiederholen.
 
-1. **Stack & Queue** → `2_Zusammenfassungen/2_Code_Uebersicht.md` + `4_Fokusthemen…`
-2. **Sortieren (Bubble → Selection → Insertion)** → `2_Code_Uebersicht.md` + `3_Sortierverfahren_Traces.md`
-3. **Rekursion (BST-insert, Quicksort, Mergesort)** → `2_Code_Uebersicht.md`
-4. **Testen (Äquivalenzklassen + pytest)** → `2_Code_Uebersicht.md` + `4_Uebungsblaetter_Loesungen/Blatt_02_Testen.md`
-5. **Kommandozeile + Datei-IO (argparse/getopt)** → `Blatt_03…` + `Blatt_04…`
-6. **Theorie wiederholen** → `1_Theorie_SoftwareEngineering.md`
-7. **Testlauf:** `5_Probeklausur/1_Probeklausur/Aufgaben.md` (und danach `2_Probeklausur/`) selbst lösen, dann mit `Loesung.md` vergleichen.
+1. **Fahrplan folgen:** `2_Zusammenfassungen/2_Lernplan_2Tage_MUSS_ICH_KOENNEN.md` (sagt dir, was wann dran ist)
+2. **Codes tippen & üben:** `2_Zusammenfassungen/3_Alle_Codes_zum_Abtippen.md` (alle 4 Themen kompakt)
+3. **Theorie wiederholen:** `2_Zusammenfassungen/1_Theorie_SoftwareEngineering.md`
+4. **Üben an echten Aufgaben:** `3_Altklausuren/*/Vorlage/` selbst lösen → mit `Loesung/` vergleichen
+5. **Testlauf:** `5_Probeklausur/2_Probeklausur/Aufgaben.md` unter Realbedingungen (90 min, nur Hilfsmittelblatt), dann mit `Loesung.md` vergleichen
 
 ## 🔥 Wahrscheinliche Schwerpunkte (Lückenanalyse)
 Diese Themen kamen in **keiner** Altklausur dran, werden aber aktuell geübt → gut vorbereiten:

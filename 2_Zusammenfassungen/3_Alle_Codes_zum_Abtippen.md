@@ -336,7 +336,7 @@ class Trie:
 # Ternärer Baum (SS25): Einordnung nach Wortlänge -> links/mitte/rechts
 # Zirkuläre Liste (WS2425): letzter Knoten .next = self.head
 # Doppelt verkettete Liste (SS23): Node zusätzlich mit self.prev
-# (vollständig in 6_Klausur_Grundgeruest_Codes.md)
+# (vollständige Codes: siehe jeweils 3_Altklausuren/*/Loesung/)
 ```
 
 ---
