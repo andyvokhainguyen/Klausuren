@@ -20,7 +20,7 @@ Jeder Code ist **originalgetreu aus Skript bzw. Altklausur** übernommen (gleich
 | **Tag 1** | Code 1–4: Datei-IO, getopt, Logdatei-Tool, pytest | Code 5–7: Stack/Queue, verkettete Liste, BST | Code 8: die 3 naiven Sorts + Blank-Page über ALLES von heute |
 | **Tag 2** | Code 9: Quick/Merge + „nach Länge" + Blank-Page-Wdh. Tag 1 | **Probeklausur real schreiben** (90 min, nur Hilfsmittelblatt!) | Fehler nacharbeiten + Theorie 1× lesen |
 
-Empfehlung Tag 2 nachmittags: `5_Probeklausur/2_Probeklausur` (getopt + Liste + Selection = wahrscheinlichste Mischung). Theorie abends: `1_Theorie_SoftwareEngineering.md`.
+Empfehlung Tag 2 nachmittags: `5_Probeklausur/2_Probeklausur` (getopt + Liste + Selection = wahrscheinlichste Mischung). Theorie abends: `1_Theorie_Fragen_und_Antworten.md`.
 **Priorität, falls die Zeit nicht reicht:** Code 2+3 (getopt+Logdatei) > Code 8 (Sorts nach Länge) > Code 7 (BST) > Code 4 (pytest) > Rest. Das ist das SS25/WS2526-Muster.
 
 ---
@@ -526,6 +526,6 @@ def merge(left, right):
 - [ ] Quicksort (`<=` für Duplikate!) + merge_sort/merge (Skript-Namen!)
 - [ ] Vergleichszeile umbauen: nach `len()` / Tupel `(len(s), s)`
 - [ ] Probeklausur unter Realbedingungen bestanden
-- [ ] Theorie 1× durchgelesen (`1_Theorie_SoftwareEngineering.md`)
+- [ ] Theorie 1× durchgelesen (`1_Theorie_Fragen_und_Antworten.md`)
 
 **Notfall-Minimum** (wenn die Zeit knapp wird, DAS zuerst): getopt-Gerüst + Logdatei-Auswertung + BST (`_insert`/`_print_tree`) + ein Sortierverfahren nach Länge + pytest. Das ist das SS25/WS2526-Muster = wahrscheinlichste Klausur.

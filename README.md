@@ -13,12 +13,11 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 | **`4_Uebungsblaetter_Loesungen/`** | Meine Lösungen zu den Übungsblättern 1–7 + der Wiederholungsaufgaben. |
 | **`5_Probeklausur/`** | Selbst erstellte Übungsklausuren, je Klausur ein Unterordner (`1_Probeklausur/`, `2_Probeklausur/`) mit `Aufgaben.md` + `Loesung.md`. |
 
-### `2_Zusammenfassungen/` im Detail (schlank gehalten – 3 Kerndateien)
-1. **`1_Theorie_SoftwareEngineering.md`** – alle Theoriethemen im Altklausur-Frage-Stil (+ noch nie gefragte Themen).
+### `2_Zusammenfassungen/` im Detail (schlank gehalten – 4 Kerndateien)
+1. **`1_Theorie_Fragen_und_Antworten.md`** – alle Theoriefragen aus den 6 Altklausuren + mögliche weitere, **mit kurzen vollständigen Antworten** (zum Selbsttesten).
 2. **`2_Lernplan_2Tage_MUSS_ICH_KOENNEN.md`** – 🎯 **HIER STARTEN (Klausur in 2 Tagen):** Tagesplan + die 9 Pflicht-Codes mit Eselsbrücken, Zeilen-Erklärungen und Blank-Page-Checkliste.
 3. **`3_Alle_Codes_zum_Abtippen.md`** – 📋 alle relevanten Codes der 4 Themen **kompakt auf einen Blick** – zum Abtippen und Blank-Page-Üben.
 4. **`4_Sortierverfahren_Traces.md`** – alle 6 Sortierverfahren Schritt für Schritt durchgerechnet (`[55,7,78,12,42]`).
-5. **`5_Theoriefragen_Katalog.md`** – alle Theoriefragen aus den 6 Altklausuren + mögliche weitere (zum Selbsttesten; Antworten in Datei 1).
 
 ## 🎯 Empfohlener Lernpfad (Schritt für Schritt)
 
@@ -26,7 +25,7 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 
 1. **Fahrplan folgen:** `2_Zusammenfassungen/2_Lernplan_2Tage_MUSS_ICH_KOENNEN.md` (sagt dir, was wann dran ist)
 2. **Codes tippen & üben:** `2_Zusammenfassungen/3_Alle_Codes_zum_Abtippen.md` (alle 4 Themen kompakt)
-3. **Theorie wiederholen:** `2_Zusammenfassungen/1_Theorie_SoftwareEngineering.md`
+3. **Theorie wiederholen:** `2_Zusammenfassungen/1_Theorie_Fragen_und_Antworten.md`
 4. **Üben an echten Aufgaben:** `3_Altklausuren/*/Vorlage/` selbst lösen → mit `Loesung/` vergleichen
 5. **Testlauf:** `5_Probeklausur/2_Probeklausur/Aufgaben.md` unter Realbedingungen (90 min, nur Hilfsmittelblatt), dann mit `Loesung.md` vergleichen
 
