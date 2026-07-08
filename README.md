@@ -21,6 +21,7 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 4. **`4_Sortierverfahren_Traces.md`** – alle 6 Sortierverfahren Schritt für Schritt durchgerechnet (`[55,7,78,12,42]`).
 5. **`5_Lueckenanalyse.md`** – 🔍 Vergleich aller 6 Altklausuren: was kam dran, was **noch nie** → woraus sich die wahrscheinlichen Schwerpunkte ableiten.
 6. **`6_Fokusthemen_Bubble_Selection_Queue.md`** – die Codes zu den wahrscheinlichen Lücken-Themen (**Bubble-Sort, Selection-Sort, Queue**) zum Auswendiglernen.
+7. **`7_Codes_Vorgabe_vs_Selbst.md`** – 🎯 dieselben Codes, aber **Zeile für Zeile markiert**: 🟩 was der Prof vorgibt vs. 🟨 was du selbst schreiben musst – mit Tipps (basiert auf `Vorlage/` ↔ `Loesung/`-Vergleich).
 
 ## 🎯 Empfohlener Lernpfad (Schritt für Schritt)
 
