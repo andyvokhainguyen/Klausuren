@@ -1,26 +1,27 @@
 """
 Aufgabe 3 - Klausur Programmierung
 
-Kleines Analyse-Tool fuer Logdateien im Format:
-YYYY-MM-DD HH:MM:SS [LEVEL] Nachricht
+Kleines Analyse-Tool, das die Datei log.txt einliest.
+Logformat: YYYY-MM-DD HH:MM:SS [LEVEL] Nachricht
 
 Beispielaufruf:
-    python3 aufgabe03.py -i log.txt -o ergebnis.txt -b errors
+    python3 aufgabe03.py -o ergebnis.txt -b errors
 """
 
-import argparse
+import sys
+import getopt
 
 
-def zaehle(pfad, befehl):
+def zaehle(befehl):
     """
-    Liest die Logdatei unter `pfad` ein und wertet sie je nach `befehl`
-    aus:
-    - count    : Anzahl aller Zeilen in der Datei
+    Liest die Datei log.txt zeilenweise ein und wertet sie je nach
+    `befehl` aus:
+    - count    : Anzahl aller (nicht leeren) Zeilen
     - errors   : Anzahl der Zeilen, die das Wort ERROR enthalten
     - warnings : Anzahl der Zeilen, die das Wort WARNING enthalten
     """
     anzahl = 0
-    with open(pfad, "r", encoding="utf-8") as datei:
+    with open("log.txt", "r", encoding="utf-8") as datei:
         for zeile in datei:
             if zeile.strip() == "":
                 continue
@@ -41,33 +42,41 @@ def schreibe_ergebnis(pfad, befehl, ergebnis):
         datei.write(f"Ergebnis: {ergebnis}\n")
 
 
-def erstelle_parser():
-    parser = argparse.ArgumentParser(
-        description="Analyse-Tool fuer Logdateien."
-    )
-    parser.add_argument(
-        "--input", "-i", required=True,
-        help="Name der Eingabedatei (Pfad zu einer Textdatei im Log-Format)"
-    )
-    parser.add_argument(
-        "--output", "-o", required=True,
-        help="Name der Ausgabedatei, in die das Ergebnis geschrieben wird"
-    )
-    parser.add_argument(
-        "--befehl", "-b", required=True,
-        choices=["count", "errors", "warnings"],
-        help="Auszufuehrender Befehl: 'count', 'errors' oder 'warnings'"
-    )
-    return parser
+def main(argv):
+    ausgabe = None
+    befehl = None
 
+    try:
+        opts, args = getopt.getopt(argv, "o:b:h", ["output=", "befehl=", "help"])
+    except getopt.GetoptError as fehler:
+        print("Fehler:", fehler)
+        sys.exit(2)
 
-def main():
-    parser = erstelle_parser()
-    args = parser.parse_args()
+    for opt, wert in opts:
+        if opt in ("-h", "--help"):
+            print("Aufruf: python3 aufgabe03.py -b <count|errors|warnings> "
+                  "[-o <ausgabedatei>]")
+            sys.exit()
+        elif opt in ("-o", "--output"):
+            ausgabe = wert
+        elif opt in ("-b", "--befehl"):
+            befehl = wert
 
-    ergebnis = zaehle(args.input, args.befehl)
-    schreibe_ergebnis(args.output, args.befehl, ergebnis)
+    if befehl is None:
+        print("Fehler: -b ist Pflicht (count, errors oder warnings).")
+        sys.exit(2)
+    if befehl not in ("count", "errors", "warnings"):
+        print("Fehler: -b muss count, errors oder warnings sein.")
+        sys.exit(2)
+
+    ergebnis = zaehle(befehl)
+
+    if ausgabe:
+        schreibe_ergebnis(ausgabe, befehl, ergebnis)
+    else:
+        print(f"Befehl: {befehl}")
+        print(f"Ergebnis: {ergebnis}")
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
