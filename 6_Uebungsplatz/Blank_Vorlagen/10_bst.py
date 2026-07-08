@@ -26,27 +26,70 @@ class BinaryTree:                            # 🟩
     def _insert(self, data, node):
         # ✍️ SELBST: rekursiv - data < node.data -> links, sonst rechts;
         #            Platz None -> Node(data), sonst rekursiv weiter
-        pass
+        if data < node.data:
+            if node.left is None:
+                node.left = Node(data)
+            else:
+                self._insert(data, node.left)
+
+        else:
+            if node.right is None:
+                node.right = Node(data)
+            else:
+                self._insert(data, node.right)
 
     def print_tree(self):
         # ✍️ SELBST: Wrapper -> self._print_tree(self.root), falls root vorhanden
-        pass
+        if self.root is not None:
+            self._print_tree(self.root)
 
     def _print_tree(self, node):
         # ✍️ SELBST: In-order: links -> print(node.data) -> rechts (= sortiert)
-        pass
+        if node is not None:
+            self._print_tree(node.left)
+            print(node.data)
+            self._print_tree(node.right)
 
     def search(self, data):
         # ✍️ SELBST: True/False - rekursiv links/rechts absteigen
-        pass
+        return self._search(data, self.root)
+    
+    def _search(self, data, node):
+        if node is not None:
+            return False
+        if data == node.data:
+            return True
+        elif data < node.data:
+            return self._search(data, node.left)
+        else:
+            return self._search(data, node.right)
 
     def delete(self, data):
         # ✍️ SELBST (schwieriger, aus Skript): self.root = self._delete(self.root, data)
-        pass
+        self.root = self._delete(self.root, data)
 
     def _delete(self, node, data):
         # ✍️ SELBST: 3 Fälle - Blatt / ein Kind / zwei Kinder (kleinsten rechts holen)
-        pass
+        if node is None:
+            return node
+        if data < node.data:
+            node.left = self._delete(node.left, data)
+        elif data > node.data:
+            node.right = self._delete(node.right, data)
+        else:
+            if node.left is None:
+                return node.right
+            elif node.right is None:
+                return node.left
+            temp = self._find_min(node.right)
+            node.data = temp.data
+            node.right = self._delete(node.right, temp.data)
+        return node
+
+    def _find_min(self, node):
+        if node.left is None:
+            return node
+        return self._find_min(node.left)
 
 
 # Testaufruf

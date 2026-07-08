@@ -45,11 +45,13 @@ class Queue:                                 # 🟩
 
     def dequeue(self):
         # ✍️ SELBST: VORDERSTES Element entfernen -> self.queue.pop(0); leer -> None
-        pass
+        if len(self.queue) < 1:
+            return None
+        return self.queue.pop(0)
 
     def display(self):
         # ✍️ SELBST: print(self.queue)
-        pass
+        print(self.queue)
 
 
 # Testaufruf
