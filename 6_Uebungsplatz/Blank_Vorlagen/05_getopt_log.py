@@ -60,7 +60,7 @@ def main(argv):
     #   danach: Pflicht-Args prüfen; ergebnis = zaehle(...); schreibe_ergebnis(...)
     try:
         opts, args = getopt.getopt(argv, "i:o:b:h",
-                                   ["input=", "output=", "befehl:", "help"])
+                                   ["input=", "output=", "befehl=", "help"])
     except getopt.GetoptError as fehler:
         print("Fehler:", fehler)
         sys.exit(2)

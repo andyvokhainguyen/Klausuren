@@ -53,7 +53,7 @@ def main():
     parser.add_argument("--output", "-o", required=True)
     parser.add_argument("--befehl", "-b", required=True,
                         choices=["level", "user", "action"])
-    args = parser.parse_args
+    args = parser.parse_args()
 
     ergebnis = zaehle(args.input, args.befehl)
     schreibe_ergebnis(args.output, args.befehl, ergebnis)

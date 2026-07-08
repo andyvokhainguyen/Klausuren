@@ -55,7 +55,7 @@ class BinaryTree:                            # 🟩
         return self._search(data, self.root)
     
     def _search(self, data, node):
-        if node is not None:
+        if node is None:
             return False
         if data == node.data:
             return True
