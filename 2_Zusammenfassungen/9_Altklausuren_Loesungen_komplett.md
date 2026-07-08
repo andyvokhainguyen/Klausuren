@@ -391,34 +391,35 @@ if __name__ == "__main__":
 ```
 
 ### Aufgabe 5 – Datenstruktur: Binärer Suchbaum
+> Original-Klausur gab `key`/`self.val` vor; hier zur Einheitlichkeit auf `data`/`self.data` umgestellt (gleiche Struktur). In der echten Klausur die vorgegebenen Namen nehmen.
 ```python
 class Node:
-    def __init__(self, key):
+    def __init__(self, data):
         self.left = None
         self.right = None
-        self.val = key
+        self.data = data
 
 class BinarySearchTree:
     def __init__(self):
         self.root = None
 
-    def insert(self, key):
+    def insert(self, data):
         if self.root is None:
-            self.root = Node(key)
+            self.root = Node(data)
         else:
-            self._insert_rekursiv(self.root, key)
+            self._insert_rekursiv(self.root, data)
 
-    def _insert_rekursiv(self, node, key):
-        if key < node.val:
+    def _insert_rekursiv(self, node, data):
+        if data < node.data:
             if node.left is None:
-                node.left = Node(key)
+                node.left = Node(data)
             else:
-                self._insert_rekursiv(node.left, key)
+                self._insert_rekursiv(node.left, data)
         else:
             if node.right is None:
-                node.right = Node(key)
+                node.right = Node(data)
             else:
-                self._insert_rekursiv(node.right, key)
+                self._insert_rekursiv(node.right, data)
 
     def print_tree(self):
         self._print_rekursiv(self.root)
@@ -426,7 +427,7 @@ class BinarySearchTree:
     def _print_rekursiv(self, node):
         if node is not None:
             self._print_rekursiv(node.left)    # links
-            print(node.val)                    # Knoten
+            print(node.data)                   # Knoten
             self._print_rekursiv(node.right)   # rechts  -> In-order = sortiert
 ```
 
