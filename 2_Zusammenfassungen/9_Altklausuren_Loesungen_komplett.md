@@ -87,10 +87,13 @@ def main():
     parser.add_argument("--infile", "-i", required=True)
     parser.add_argument("--outfile", "-o", required=True)
     parser.add_argument("--shift", "-s", type=int, required=True)
-    gruppe = parser.add_mutually_exclusive_group(required=True)
-    gruppe.add_argument("--chiffrieren", "-c", action="store_true")
-    gruppe.add_argument("--dechiffrieren", "-d", action="store_true")
+    parser.add_argument("--chiffrieren", "-c", action="store_true")
+    parser.add_argument("--dechiffrieren", "-d", action="store_true")
     args = parser.parse_args()
+
+    # genau eins von -c/-d muss gesetzt sein (ohne mutually_exclusive_group)
+    if args.chiffrieren == args.dechiffrieren:
+        parser.error("Bitte genau eine Option angeben: -c ODER -d.")
 
     with open(args.infile, "r", encoding="utf-8") as ein, \
          open(args.outfile, "w", encoding="utf-8") as aus:
@@ -218,10 +221,13 @@ def main():
     parser = argparse.ArgumentParser(description="Atbash zeilenweise.")
     parser.add_argument("--infile", "-i", required=True)
     parser.add_argument("--outfile", "-o", required=True)
-    gruppe = parser.add_mutually_exclusive_group(required=True)
-    gruppe.add_argument("--chiffrieren", "-c", action="store_true")
-    gruppe.add_argument("--dechiffrieren", "-d", action="store_true")
+    parser.add_argument("--chiffrieren", "-c", action="store_true")
+    parser.add_argument("--dechiffrieren", "-d", action="store_true")
     args = parser.parse_args()
+
+    # genau eins von -c/-d muss gesetzt sein (ohne mutually_exclusive_group)
+    if args.chiffrieren == args.dechiffrieren:
+        parser.error("Bitte genau eine Option angeben: -c ODER -d.")
 
     with open(args.infile, "r", encoding="utf-8") as ein, \
          open(args.outfile, "w", encoding="utf-8") as aus:

@@ -39,13 +39,16 @@ def main():
                         help="gibt die Eingabedatei an")
     parser.add_argument("--outfile", "-o", required=True,
                         help="gibt die Ausgabedatei an")
-    # -c und -d schliessen sich gegenseitig aus (genau eins muss gewaehlt werden)
-    gruppe = parser.add_mutually_exclusive_group(required=True)
-    gruppe.add_argument("--chiffrieren", "-c", action="store_true",
+    parser.add_argument("--chiffrieren", "-c", action="store_true",
                         help="Eingabedatei verschluesseln")
-    gruppe.add_argument("--dechiffrieren", "-d", action="store_true",
+    parser.add_argument("--dechiffrieren", "-d", action="store_true",
                         help="Eingabedatei entschluesseln")
     args = parser.parse_args()
+
+    # -c und -d schliessen sich gegenseitig aus (ohne mutually_exclusive_group
+    # selbst pruefen): genau eins muss gewaehlt sein.
+    if args.chiffrieren == args.dechiffrieren:
+        parser.error("Bitte genau eine Option angeben: -c ODER -d.")
 
     # Eingabedatei zeilenweise lesen, verarbeiten und in Ausgabedatei schreiben.
     # (Bei Atbash sind Ver- und Entschluesselung identisch; beide Flags werden

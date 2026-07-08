@@ -44,13 +44,17 @@ def main():
                         help="gibt die Ausgabedatei an")
     parser.add_argument("--shift", "-s", type=int, required=True,
                         help="Shift um Anzahl Zeichen im Alphabet")
-    # -c und -d schliessen sich gegenseitig aus (genau eins muss gewaehlt werden)
-    gruppe = parser.add_mutually_exclusive_group(required=True)
-    gruppe.add_argument("--chiffrieren", "-c", action="store_true",
+    parser.add_argument("--chiffrieren", "-c", action="store_true",
                         help="Eingabedatei verschluesseln")
-    gruppe.add_argument("--dechiffrieren", "-d", action="store_true",
+    parser.add_argument("--dechiffrieren", "-d", action="store_true",
                         help="Eingabedatei entschluesseln")
     args = parser.parse_args()
+
+    # -c und -d schliessen sich gegenseitig aus (ohne mutually_exclusive_group
+    # selbst pruefen): genau eins muss gewaehlt sein. Sind beide gleich, wurde
+    # entweder keins oder beides angegeben -> Fehler.
+    if args.chiffrieren == args.dechiffrieren:
+        parser.error("Bitte genau eine Option angeben: -c ODER -d.")
 
     # Eingabedatei zeilenweise lesen, verarbeiten und in Ausgabedatei schreiben
     with open(args.infile, "r", encoding="utf-8") as ein, \
