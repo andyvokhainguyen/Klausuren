@@ -312,31 +312,227 @@ class BinaryTree:
             return self._search(data, node.left)
         else:
             return self._search(data, node.right)
+
+    # Löschen (Skript 05) – drei Fälle: Blatt / ein Kind / zwei Kinder
+    def delete(self, data):
+        self.root = self._delete(self.root, data)
+
+    def _delete(self, node, data):
+        if node is None:
+            return node
+        if data < node.data:
+            node.left = self._delete(node.left, data)
+        elif data > node.data:
+            node.right = self._delete(node.right, data)
+        else:
+            # Knoten gefunden
+            if node.left is None:            # kein/nur rechtes Kind
+                return node.right
+            elif node.right is None:         # nur linkes Kind
+                return node.left
+            # zwei Kinder: kleinsten im rechten Teilbaum holen (Nachfolger)
+            temp = self._find_min(node.right)
+            node.data = temp.data
+            node.right = self._delete(node.right, temp.data)
+        return node
+
+    def _find_min(self, node):
+        if node.left is None:
+            return node
+        else:
+            return self._find_min(node.left)
 ```
 
-### Extras – nur einmal durchlesen (niedrige Priorität)
+### Trie / Präfixbaum (WS2526) – Kinder als dict
 ```python
-# Trie (WS2526): Kinder als dict
 class Node:
     def __init__(self):
-        self.kinder = {}
+        self.kinder = {}                 # dict[str, Node]
         self.ist_wortende = False
+
 
 class Trie:
     def __init__(self):
         self.wurzel = Node()
-    def einfuegen(self, wort):
-        akt = self.wurzel
-        for ch in wort:
-            if ch not in akt.kinder:
-                akt.kinder[ch] = Node()
-            akt = akt.kinder[ch]
-        akt.ist_wortende = True
 
-# Ternärer Baum (SS25): Einordnung nach Wortlänge -> links/mitte/rechts
-# Zirkuläre Liste (WS2425): letzter Knoten .next = self.head
-# Doppelt verkettete Liste (SS23): Node zusätzlich mit self.prev
-# (vollständige Codes: siehe jeweils 3_Altklausuren/*/Loesung/)
+    def einfuegen(self, wort):
+        aktueller = self.wurzel
+        for ch in wort:
+            if ch not in aktueller.kinder:
+                aktueller.kinder[ch] = Node()
+            aktueller = aktueller.kinder[ch]
+        aktueller.ist_wortende = True
+
+    def enthaelt(self, wort):
+        aktueller = self.wurzel
+        for ch in wort:
+            if ch not in aktueller.kinder:
+                return False
+            aktueller = aktueller.kinder[ch]
+        return aktueller.ist_wortende      # nur True, wenn Wort dort endet
+
+    def woerter_mit_praefix(self, praefix):
+        aktueller = self.wurzel
+        for ch in praefix:
+            if ch not in aktueller.kinder:
+                return []
+            aktueller = aktueller.kinder[ch]
+        ergebnis = []
+        self._sammle_woerter(aktueller, praefix, ergebnis)
+        return ergebnis                    # leerer Präfix -> ALLE Wörter
+
+    def _sammle_woerter(self, knoten, gebaut, ergebnis):
+        if knoten.ist_wortende:
+            ergebnis.append(gebaut)
+        for ch in sorted(knoten.kinder.keys()):   # sorted -> alphabetisch
+            self._sammle_woerter(knoten.kinder[ch], gebaut + ch, ergebnis)
+```
+
+### Ternärer Suchbaum (SS25) – Einordnung nach Wortlänge
+```python
+class Node:
+    def __init__(self, wort):
+        self.wort = wort
+        self.links = None                  # kürzer
+        self.mitte = None                  # gleich lang
+        self.rechts = None                 # länger
+
+
+class TernaererSuchbaum:
+    def __init__(self):
+        self.wurzel = None
+
+    def einfuegen(self, wort):
+        if self.wurzel is None:
+            self.wurzel = Node(wort)
+        else:
+            self._einfuegen_rekursiv(self.wurzel, wort)
+
+    def _einfuegen_rekursiv(self, knoten, wort):
+        if len(wort) < len(knoten.wort):
+            if knoten.links is None:
+                knoten.links = Node(wort)
+            else:
+                self._einfuegen_rekursiv(knoten.links, wort)
+        elif len(wort) == len(knoten.wort):
+            if knoten.mitte is None:
+                knoten.mitte = Node(wort)
+            else:
+                self._einfuegen_rekursiv(knoten.mitte, wort)
+        else:
+            if knoten.rechts is None:
+                knoten.rechts = Node(wort)
+            else:
+                self._einfuegen_rekursiv(knoten.rechts, wort)
+
+    def inorder_ausgabe(self):
+        self._gesammelt = []
+        self._inorder(self.wurzel)
+        print(", ".join(self._gesammelt))
+
+    def _inorder(self, knoten):            # links -> mitte -> ich -> rechts
+        if knoten is not None:
+            self._inorder(knoten.links)
+            self._inorder(knoten.mitte)
+            self._gesammelt.append(knoten.wort)
+            self._inorder(knoten.rechts)
+```
+
+### Zirkuläre verkettete Liste (WS2425) – letzter Knoten zeigt auf head
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, key):                 # am Ende einfügen
+        neuer = Node(key)
+        if self.head is None:
+            self.head = neuer
+            neuer.next = self.head          # zeigt auf sich selbst
+        else:
+            current = self.head
+            while current.next != self.head:    # Abbruch bei head, nicht None!
+                current = current.next
+            current.next = neuer
+            neuer.next = self.head          # Kreis schließen
+
+    def delete(self, key):
+        if self.head is None:
+            return
+        if self.head.data == key:           # head löschen
+            if self.head.next == self.head:  # nur ein Element
+                self.head = None
+                return
+            last = self.head
+            while last.next != self.head:
+                last = last.next
+            self.head = self.head.next
+            last.next = self.head
+            return
+        current = self.head                 # Mitte/Ende
+        while current.next != self.head:
+            if current.next.data == key:
+                current.next = current.next.next
+                return
+            current = current.next
+
+    def display(self):
+        if self.head is None:
+            print("Liste ist leer")
+            return
+        current = self.head
+        while True:
+            print(current.data)
+            current = current.next
+            if current == self.head:        # wieder am Anfang -> Stopp
+                break
+```
+
+### Doppelt verkettete Liste (Skript-05-Übung / SS23) – Node mit prev + next
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None                   # <<< zusätzlich zur einfachen Liste
+        self.next = None
+
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, data):                # am Ende anhängen
+        neuer = Node(data)
+        if self.head is None:
+            self.head = neuer
+            return
+        current = self.head
+        while current.next is not None:
+            current = current.next
+        current.next = neuer
+        neuer.prev = current                # Rückwärts-Zeiger setzen
+
+    def print_vorwaerts(self):
+        current = self.head
+        while current is not None:
+            print(current.data)
+            current = current.next
+
+    def print_rueckwaerts(self):           # ans Ende laufen, dann über prev zurück
+        current = self.head
+        if current is None:
+            return
+        while current.next is not None:
+            current = current.next
+        while current is not None:
+            print(current.data)
+            current = current.prev
 ```
 
 ---
