@@ -1,9 +1,0 @@
-"""
-Aufgabe 1 - Klausur Prog
-
-Author:
-Vorname Nachname
-
-Matrikelnummer:
-999.999
-"""

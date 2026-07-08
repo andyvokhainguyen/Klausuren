@@ -1,9 +1,0 @@
-"""
-Aufgabe 1 - Klausur Programmierung WS2025/26
-
-Author:
-Vorname Nachname
-
-Matrikelnummer:
-999.999
-"""
