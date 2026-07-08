@@ -22,6 +22,7 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 5. **`5_Lueckenanalyse.md`** – 🔍 Vergleich aller 6 Altklausuren: was kam dran, was **noch nie** → woraus sich die wahrscheinlichen Schwerpunkte ableiten.
 6. **`6_Fokusthemen_Bubble_Selection_Queue.md`** – die Codes zu den wahrscheinlichen Lücken-Themen (**Bubble-Sort, Selection-Sort, Queue**) zum Auswendiglernen.
 7. **`7_Codes_Vorgabe_vs_Selbst.md`** – 🎯 dieselben Codes, aber **Zeile für Zeile markiert**: 🟩 was der Prof vorgibt vs. 🟨 was du selbst schreiben musst – mit Tipps (basiert auf `Vorlage/` ↔ `Loesung/`-Vergleich).
+8. **`8_Uebungsvorlagen_zum_Selberschreiben.md`** – ✍️ **Blank-Page-Version:** nur der vorgegebene Prof-Code, an jeder Selbst-Stelle ein `# ✍️ SELBST:`-Marker mit Hinweis – zum Üben ohne Lösung.
 
 ## 🎯 Empfohlener Lernpfad (Schritt für Schritt)
 
