@@ -25,6 +25,8 @@ Zentrale Übersicht über alle Lernmaterialien. **Wichtigstes zuerst:** in der K
 8. **`8_Uebungsvorlagen_zum_Selberschreiben.md`** – ✍️ **Blank-Page-Version:** nur der vorgegebene Prof-Code, an jeder Selbst-Stelle ein `# ✍️ SELBST:`-Marker mit Hinweis – zum Üben ohne Lösung.
 9. **`9_Altklausuren_Loesungen_komplett.md`** – 📚 **alle 6 Altklausuren komplett gelöst**, Aufgabe für Aufgabe (Exception-Aufgaben ausgelassen) – die vollständige Übersicht der erwarteten Lösungen.
 10. **`10_Grundgerueste_alles.md`** – 🧱 **das Minimum:** pro Themenfamilie ein Skelett zum Auswendiglernen, mit der einen Stelle (▶), die sich pro Aufgabe ändert.
+11. **`11_Sortierverfahren_erklaert.md`** – 🔢 alle 6 Sortierverfahren **Schritt für Schritt erklärt** (Idee → Code → Ablauf → Komplexität).
+12. **`12_Datenstrukturen_erklaert.md`** – 🧩 die Skript-Datenstrukturen (Liste, doppelte Liste, Queue, Stack, BST) **Schritt für Schritt erklärt** (Idee → Code → Ablauf → Anwendung).
 
 ## 🎯 Empfohlener Lernpfad (Schritt für Schritt)
 
